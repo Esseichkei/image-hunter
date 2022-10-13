@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { Header } from './components/header/Header';
 
 function App() {
   return (
     <Router>
-      <p>router</p>
+      <Header />
       <Routes>
       <Route path='/lol' element={(
           <p>
