@@ -13,17 +13,17 @@ const HeaderDiv = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    `;
+`;
 const SpacerDiv = styled.div`
     height: 73px;
-    `;
+`;
 const HeaderInput = styled.input`
     box-sizing: border-box;
     background-color: #F0F0F0;
     border-style: none;
     border-radius: 3px;
     padding: 0.3rem;
-    `;
+`;
 
 
 export function Header(props) {
