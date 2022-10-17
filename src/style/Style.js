@@ -7,6 +7,7 @@ export const MainDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 `;
 
 //Header
@@ -54,4 +55,9 @@ export const StyledTabLink = styled(Link)`
     background-color: ${props => props.backgroundcolor ? '#F0F0F0' : 'transparent'};
 `;
 
-//
+//Search
+export const SearchImg = styled.img`
+    margin: 10px;
+    width: 80%;
+    height: auto;
+`;

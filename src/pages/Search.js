@@ -1,4 +1,4 @@
-//import { MainDiv } from "../style/Style";
+import { MainDiv, SearchImg } from "../style/Style";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectSearch, loadImages } from "../slices/searchSlice/SearchSlice";
@@ -7,9 +7,15 @@ export function Search(props) {
     const search = useSelector(selectSearch);
     const dispatch = useDispatch();
     useEffect(()=>{
-        dispatch(loadImages('cat'));
-    },[])
+        dispatch(loadImages('beach'));
+    },[]);
     return (
-        <p>track your prey, good hunter </p>
+        <MainDiv>
+            {
+                search.images.map((image) => {
+                    return <SearchImg src={image.urls.regular} alt={image.description} key={image.id}/>;
+                })
+            }
+        </MainDiv>
     );
 }
