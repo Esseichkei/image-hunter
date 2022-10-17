@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import img from './img/Love_Heart_symbol.svg';
 
 //App
 export const MainDiv = styled.div`
@@ -27,6 +28,7 @@ export const HeaderDiv = styled.div`
 `;
 export const SpacerDiv = styled.div`
     height: 73px;
+    z-index: 10;
 `;
 export const HeaderInput = styled.input`
     box-sizing: border-box;
@@ -56,8 +58,31 @@ export const StyledTabLink = styled(Link)`
 `;
 
 //Search
-export const SearchImg = styled.img`
+export const SearchItemDiv = styled.div`
     margin: 10px;
     width: 80%;
+    position: relative;
+    z-index: -3;
+`;
+export const SearchImg = styled.img`
+    width: 100%;
     height: auto;
+    z-index: -2;
+`;
+export const SearchFavButton = styled.button`
+    width: 4rem;
+    height: 4rem;
+    opacity: 60%;
+    position: absolute;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    bottom: 2rem;
+    right: 2rem;
+    border: 1px none transparent;
+    background-color: #F0F0F0;
+    background-image: url(${img});
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
 `;
