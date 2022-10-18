@@ -8,7 +8,7 @@ export function Search(props) {
     const search = useSelector(selectSearch);
     const dispatch = useDispatch();
     useEffect(()=>{
-        dispatch(loadImages('fly'));
+        dispatch(loadImages(''));
     },[dispatch]);
     return (
         <MainDiv>
