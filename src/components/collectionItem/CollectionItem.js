@@ -13,12 +13,13 @@ export function CollectionItem(props) {
             Image ID: {props.imagedata.id} <br/>
             Dimensions: {props.imagedata.width} x {props.imagedata.height} <br/>
             Likes: {props.imagedata.likes} <br/>
-            Description: {props.imagedata.description.length > 0 ? props.imagedata.description : "Not found."}
+            Description: {props.imagedata.description ? props.imagedata.description : "Not found."}
         </h4>
         <CollectionDetails>
             <CollectionEdit/>
-            <a href={props.imagedata.links.download}></a>
-            <CollectionDownload/>
+            <a href={props.imagedata.links.download} target="_blank" rel="noreferrer" download>
+                <CollectionDownload/>
+            </a>
             <CollectionDelete onClick={handleDeleteClick}/>
         </CollectionDetails>
     </CollectionDiv>);

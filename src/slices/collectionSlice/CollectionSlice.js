@@ -21,12 +21,10 @@ const reducers = {
             state.images.push({...action.payload, addedAtTime: Date.now()});
             localStorage.setItem('collectionImages', JSON.stringify(state.images));
         }
-        console.log(localStorage.getItem('collectionImages'));
     },
     deleteFavorite: (state, action) => {
         state.images = state.images.filter(image => image.id !== action.payload.id)
         localStorage.setItem('collectionImages', JSON.stringify(state.images));
-        console.log(localStorage.getItem('collectionImages'));
     },
     editDescriptionAtId: (state, action) => {
         state.images.map((image) => {

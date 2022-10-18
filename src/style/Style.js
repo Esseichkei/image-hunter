@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import heart_img from './img/Love_Heart_symbol.svg';
-import save_img from './img/save.svg';
+import download_img from './img/download.svg';
 import edit_img from './img/edit.svg';
 import trashcan_img from './img/trashcan.svg';
+import check_img from './img/check.svg';
+import cross_img from './img/cross.svg';
 
 //App
 export const MainDiv = styled.div`
@@ -137,8 +139,24 @@ export const CollectionDownload = styled.button`
     width: 2rem;
     border: 1px none transparent;
     background-color: #F0F0F0;
-    background-image: url(${save_img});
+    background-image: url(${download_img});
     background-size: 65%;
     background-position: center;
     background-repeat: no-repeat;
 `;
+export const DescriptionDiv = styled.div`
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(224, 224, 224, 0.8);
+    z-index: 2;
+    display: ${props => props.display ? 'flex' : 'none'};
+    justify-content: center;
+    align-items: center;
+`;
+export const DescriptionInput = styled.input`
+`; //todo
+export const DescriptionAccept = styled.button`
+`; //todo
+export const DescriptionCancel = styled.button`
+`; //todo
