@@ -23,7 +23,7 @@ const reducers = {
         }
         console.log(localStorage.getItem('collectionImages'));
     },
-    removeFavorite: (state, action) => {
+    deleteFavorite: (state, action) => {
         state.images = state.images.filter(image => image.id !== action.payload.id)
         localStorage.setItem('collectionImages', JSON.stringify(state.images));
         console.log(localStorage.getItem('collectionImages'));
@@ -45,6 +45,6 @@ export const CollectionSlice = createSlice({
     reducers: reducers,
 });
 
-export const { loadFavorites, addFavorite, removeFavorite, editDescriptionAtId } = CollectionSlice.actions;
+export const { loadFavorites, addFavorite, deleteFavorite, editDescriptionAtId } = CollectionSlice.actions;
 
 export const selectCollection = (state) => state.collection;

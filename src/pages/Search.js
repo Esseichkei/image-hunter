@@ -14,7 +14,7 @@ export function Search(props) {
         <MainDiv>
             {
                 search.images.map((image) => {
-                    return <SearchItem imagedata={image} key={'item' + image.id}/>;
+                    return <SearchItem imagedata={image} key={'sitem' + image.id}/>;
                 })
             }
         </MainDiv>

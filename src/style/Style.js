@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import img from './img/Love_Heart_symbol.svg';
+import heart_img from './img/Love_Heart_symbol.svg';
+import save_img from './img/save.svg';
+import edit_img from './img/edit.svg';
+import trashcan_img from './img/trashcan.svg';
 
 //App
 export const MainDiv = styled.div`
@@ -78,7 +81,63 @@ export const SearchFavButton = styled.button`
     right: 2rem;
     border: 1px none transparent;
     background-color: #F0F0F0;
-    background-image: url(${img});
+    background-image: url(${heart_img});
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+`;
+// Collection
+export const CollectionDiv = styled.div`
+    margin: 1rem;
+    padding: 1rem;
+    width: 80%;
+    background-color: #D9D9D9;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+export const CollectionDetails = styled.div`
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`;
+export const CollectionEdit = styled.button`
+    margin: 0.2rem;
+    padding: 0.2rem;
+    height: 2rem;
+    width: 2rem;
+    border: 1px none transparent;
+    background-color: #F0F0F0;
+    background-image: url(${edit_img});
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+`;
+export const CollectionDelete = styled.button`
+    margin: 0.2rem;
+    padding: 0.2rem;
+    height: 2rem;
+    width: 2rem;
+    border: 1px none transparent;
+    background-color: #F0F0F0;
+    background-image: url(${trashcan_img});
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+`;
+export const CollectionDownload = styled.button`
+    margin: 0.2rem;
+    padding: 0.2rem;
+    height: 2rem;
+    width: 2rem;
+    border: 1px none transparent;
+    background-color: #F0F0F0;
+    background-image: url(${save_img});
     background-size: 65%;
     background-position: center;
     background-repeat: no-repeat;

@@ -55,7 +55,6 @@ const extraReducers = {
     [loadImages.rejected]: (state, action) => {
         state.isLoading = false;
         state.hasError = true;
-        console.log(action.payload);
     }
 }
 

@@ -1,6 +1,6 @@
 import { SearchFavButton, SearchImg, SearchItemDiv } from "../../style/Style";
 import { useState, useEffect } from "react";
-import { addFavorite, loadFavorites, removeFavorite, selectCollection } from "../../slices/collectionSlice/CollectionSlice";
+import { addFavorite, loadFavorites, deleteFavorite, selectCollection } from "../../slices/collectionSlice/CollectionSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 /*function saveToLocalStorage(image) {
@@ -16,12 +16,12 @@ export function SearchItem(props) {
             dispatch(addFavorite(props.imagedata));
             favSetter(true);
         } else {
-            dispatch(removeFavorite(props.imagedata));
+            dispatch(deleteFavorite(props.imagedata));
             favSetter(false);
         }
     }
-    return (<SearchItemDiv key={'div' + props.imagedata.id}>
-                <SearchImg src={props.imagedata.urls.regular} alt={props.imagedata.description} key={'img' + props.imagedata.id}/>
-                <SearchFavButton key={props.imagedata.id} onClick={handleFavIconClick} opacity={fav ? 'true' : ''}/>
+    return (<SearchItemDiv>
+                <SearchImg src={props.imagedata.urls.regular} alt={props.imagedata.description}/>
+                <SearchFavButton onClick={handleFavIconClick} opacity={fav ? 'true' : ''}/>
             </SearchItemDiv>);
 }
