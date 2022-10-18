@@ -25,10 +25,10 @@ export const HeaderDiv = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 `;
 export const SpacerDiv = styled.div`
     height: 73px;
-    z-index: 10;
 `;
 export const HeaderInput = styled.input`
     box-sizing: border-box;
@@ -62,20 +62,18 @@ export const SearchItemDiv = styled.div`
     margin: 10px;
     width: 80%;
     position: relative;
-    z-index: -3;
 `;
 export const SearchImg = styled.img`
     width: 100%;
     height: auto;
-    z-index: -2;
 `;
 export const SearchFavButton = styled.button`
     width: 4rem;
     height: 4rem;
-    opacity: 60%;
+    opacity: ${props => props.opacity ? '100%' : '50%'};
     position: absolute;
     padding: 0.5rem;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     bottom: 2rem;
     right: 2rem;
     border: 1px none transparent;
@@ -84,5 +82,4 @@ export const SearchFavButton = styled.button`
     background-size: 65%;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: 0;
 `;

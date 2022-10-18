@@ -2,7 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const accessKey = 'R_zWk1k1lts7JyWGw7v-Qc0wHTHAVY_GAsVvYVEn9a4';
 export const loadImages = createAsyncThunk("search/loadImages", async (searchTerm, thunkAPI) => {
-    const response = await fetch(`http://api.unsplash.com/search/photos/?client_id=${accessKey}&query=${searchTerm}`);
+    let response;
+    if (searchTerm.length === 0) {
+        response = await fetch(`http://api.unsplash.com/photos/random/?client_id=${accessKey}&count=10`);
+    } else {
+        response = await fetch(`http://api.unsplash.com/search/photos/?client_id=${accessKey}&query=${searchTerm}`);
+    }
     const data = await response.json();
     return data;
 });
@@ -21,13 +26,29 @@ const extraReducers = {
         state.hasError = false;
     },
     [loadImages.fulfilled]: (state, action) => {
-        state.images = action.payload.results.map((img) => {
-            return {
-                id: img.id,
-                description: img.description,
-                urls: img.urls,
-                links: img.links};
-        })
+        if (action.payload.results !== undefined){
+            state.images = action.payload.results.map((img) => {
+                return {
+                    id: img.id,
+                    height: img.height,
+                    width: img.width,
+                    likes: img.likes,
+                    description: img.description,
+                    urls: img.urls,
+                    links: img.links};
+            });
+        } else {
+            state.images = action.payload.map((img) => {
+                return {
+                    id: img.id,
+                    height: img.height,
+                    width: img.width,
+                    likes: img.likes,
+                    description: img.description,
+                    urls: img.urls,
+                    links: img.links};
+            });
+        }
         state.isLoading = false;
         state.hasError = false;
     },
