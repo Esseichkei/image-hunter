@@ -5,8 +5,6 @@ import { selectSearch, loadImages } from "../slices/searchSlice/SearchSlice";
 import { SearchItem } from "../components/searchItem/SearchItem";
 import { useParams } from "react-router-dom";
 
-const searchPath = '/search/';
-
 export function Search(props) {
     const search = useSelector(selectSearch);
     const params = useParams();
@@ -14,7 +12,7 @@ export function Search(props) {
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(loadImages(query));
-    },[dispatch]);
+    },[dispatch, query]);
     return (
         <MainDiv>
             {
