@@ -144,19 +144,66 @@ export const CollectionDownload = styled.button`
     background-position: center;
     background-repeat: no-repeat;
 `;
-export const DescriptionDiv = styled.div`
+export const EmptyDiv = styled.div`
+    margin: 0;
+    padding: 0;
+    display: block;
+`;
+//Description
+export const DescriptionBlocker = styled.div`
     position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(224, 224, 224, 0.8);
     z-index: 2;
-    display: ${props => props.display ? 'flex' : 'none'};
+    display: ${props => props.show ? 'flex' : 'none'};
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+export const DescriptionDiv = styled.div`
+    background-color: #F0F0F0;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
 export const DescriptionInput = styled.input`
-`; //todo
+    border: 1px none transparent;
+    padding: 1rem;
+    margin: 1rem;
+    width: 10rem;
+    border-radius: 1rem;
+    background-color: #D9D9D9;
+`;
+export const DescriptionButtonCluster = styled.div`
+    padding: 0.5rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+`;
 export const DescriptionAccept = styled.button`
-`; //todo
+    margin: 0.2rem;
+    padding: 0.2rem;
+    height: 2rem;
+    width: 2rem;
+    border: 1px none transparent;
+    background-color: #F0F0F0;
+    background-image: url(${check_img});
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+`;
 export const DescriptionCancel = styled.button`
-`; //todo
+    margin: 0.2rem;
+    padding: 0.2rem;
+    height: 2rem;
+    width: 2rem;
+    border: 1px none transparent;
+    background-color: #F0F0F0;
+    background-image: url(${cross_img});
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+`;
