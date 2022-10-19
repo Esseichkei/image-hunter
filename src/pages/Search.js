@@ -10,7 +10,7 @@ const searchPath = '/search/';
 export function Search(props) {
     const search = useSelector(selectSearch);
     const params = useParams();
-    const query = params ? params.query : '';
+    const query = params.query !== undefined ? params.query : '';
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(loadImages(query));

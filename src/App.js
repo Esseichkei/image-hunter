@@ -24,6 +24,9 @@ function App() {
             <Route path='/search/:query' element={(
                 <Search />
               )} />
+            <Route path='/*' element={(
+                <p>Error 404: Something went wrong, good hunter...</p>
+              )} />
           </Routes>
         </MainDiv>
       </Router>
