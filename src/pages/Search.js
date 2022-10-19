@@ -3,12 +3,17 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectSearch, loadImages } from "../slices/searchSlice/SearchSlice";
 import { SearchItem } from "../components/searchItem/SearchItem";
+import { useParams } from "react-router-dom";
+
+const searchPath = '/search/';
 
 export function Search(props) {
     const search = useSelector(selectSearch);
+    const params = useParams();
+    const query = params ? params.query : '';
     const dispatch = useDispatch();
     useEffect(()=>{
-        dispatch(loadImages(''));
+        dispatch(loadImages(query));
     },[dispatch]);
     return (
         <MainDiv>

@@ -18,7 +18,10 @@ function App() {
             <Route path='/collection' element={(
               <Collection />
               )} />
-            <Route path='/*' element={(
+            <Route path='/' element={(
+                <Search />
+              )} />
+            <Route path='/search/:query' element={(
                 <Search />
               )} />
           </Routes>
