@@ -19,13 +19,13 @@ export function Collection(props) {
     return (
         <MainDiv>
             <OrderByDiv>
-                <p>Order by:</p>
+                <p>Order by (Ascending):</p>
                 <OrderByButton active={orderBy === 'addedAtTime'} onClick={chooseChrono}>Chronological</OrderByButton>
                 <OrderByButton active={orderBy === 'likes'} onClick={chooseLikes}>Likes</OrderByButton>
                 <OrderByButton active={orderBy === 'width'} onClick={chooseWidth}>Width</OrderByButton>
                 <OrderByButton active={orderBy === 'height'} onClick={chooseHeight}>Height</OrderByButton>
             </OrderByDiv>
-            {collection.images.filter(image => image.description.toLowerCase().includes(query.toLowerCase())).map(image => <CollectionItem imagedata={image} key={'citem' + image.id}/>)}
+            {collection.images.filter(image => image.description.toLowerCase().includes(query.toLowerCase())).sort((a, b) => a[orderBy] - b[orderBy]).map(image => <CollectionItem imagedata={image} key={'citem' + image.id}/>)}
         </MainDiv>
     );
 }

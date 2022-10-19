@@ -156,13 +156,15 @@ export const OrderByDiv = styled.div`
     padding: 0.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     width: 60%;
+    min-width: 200px;
 `;
 export const OrderByButton = styled.button`
-    margin: 0.4rem;
-    padding: 0.4rem;
+    margin: 0.3rem;
+    padding: 0.3rem;
     border-radius: 0.3rem;
     background-color: ${props => props.active ? '#D9D9D9' : 'transparent'};
     border: ${props => props.active ? "2px solid black" : "2px solid transparent"};
