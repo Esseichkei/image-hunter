@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/image-hunter/static/css/main.e6c13ad2.css",
-    "main.js": "/image-hunter/static/js/main.07e1b5ca.js",
+    "main.js": "/image-hunter/static/js/main.eb478efd.js",
     "static/js/787.b019f728.chunk.js": "/image-hunter/static/js/787.b019f728.chunk.js",
     "static/media/download.svg": "/image-hunter/static/media/download.e688f806b45a79f85c879f8bccb6ea10.svg",
     "static/media/trashcan.svg": "/image-hunter/static/media/trashcan.b23542dae60628ca20552c9f96e44d56.svg",
@@ -11,11 +11,11 @@
     "static/media/cross.svg": "/image-hunter/static/media/cross.5940e0244f7553f6e20e5ffa5f8e858b.svg",
     "static/media/Love_Heart_symbol.svg": "/image-hunter/static/media/Love_Heart_symbol.6448a189d076c253272b56d8a0523bc4.svg",
     "main.e6c13ad2.css.map": "/image-hunter/static/css/main.e6c13ad2.css.map",
-    "main.07e1b5ca.js.map": "/image-hunter/static/js/main.07e1b5ca.js.map",
+    "main.eb478efd.js.map": "/image-hunter/static/js/main.eb478efd.js.map",
     "787.b019f728.chunk.js.map": "/image-hunter/static/js/787.b019f728.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.07e1b5ca.js"
+    "static/js/main.eb478efd.js"
   ]
 }
