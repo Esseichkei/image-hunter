@@ -4,9 +4,9 @@ const accessKey = 'R_zWk1k1lts7JyWGw7v-Qc0wHTHAVY_GAsVvYVEn9a4';
 export const loadImages = createAsyncThunk("search/loadImages", async (searchTerm, thunkAPI) => {
     let response;
     if (searchTerm.length === 0) {
-        response = await fetch(`http://api.unsplash.com/photos/random/?client_id=${accessKey}&count=10`);
+        response = await fetch(`https://api.unsplash.com/photos/random/?client_id=${accessKey}&count=10`);
     } else {
-        response = await fetch(`http://api.unsplash.com/search/photos/?client_id=${accessKey}&query=${searchTerm}`);
+        response = await fetch(`https://api.unsplash.com/search/photos/?client_id=${accessKey}&query=${searchTerm}`);
     }
     const data = await response.json();
     return data;
