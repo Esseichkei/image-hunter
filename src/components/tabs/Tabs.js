@@ -3,7 +3,7 @@ import {ContainerDiv, StyledTabLink} from "../../style/Style";
 
 export function Tabs(props) {
     const path = useLocation().pathname;
-    const inCollection = path === '/collection';
+    const inCollection = path.slice(0, '/collection'.length) === '/collection';
     return (
         <ContainerDiv>
             <StyledTabLink to='/' backgroundcolor={!inCollection ? '#F0F0F0' : ''}>

@@ -18,6 +18,9 @@ function App() {
             <Route path='/collection' element={(
               <Collection />
               )} />
+            <Route path='/collection/search/:query' element={(
+              <Collection />
+              )} />
             <Route path='/' element={(
                 <Search />
               )} />
