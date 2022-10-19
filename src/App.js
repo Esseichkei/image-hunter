@@ -10,7 +10,7 @@ import { Collection } from './pages/Collection';
 function App() {
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <MainDiv>
           <Tabs />
