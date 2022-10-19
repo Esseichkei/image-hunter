@@ -147,7 +147,9 @@ export const CollectionDownload = styled.button`
 export const EmptyDiv = styled.div`
     margin: 0;
     padding: 0;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 //Description
 export const DescriptionBlocker = styled.div`
@@ -163,15 +165,19 @@ export const DescriptionBlocker = styled.div`
 `;
 export const DescriptionDiv = styled.div`
     background-color: #F0F0F0;
+    border-radius: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+`;
+export const DescriptionTitle = styled.h4`
+    text-align: center;
 `;
 export const DescriptionInput = styled.input`
     border: 1px none transparent;
     padding: 1rem;
     margin: 1rem;
-    width: 10rem;
+    width: 14rem;
     border-radius: 1rem;
     background-color: #D9D9D9;
 `;

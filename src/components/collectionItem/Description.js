@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { editDescriptionAtId } from "../../slices/collectionSlice/CollectionSlice";
-import { DescriptionBlocker, DescriptionDiv, DescriptionInput, DescriptionButtonCluster, DescriptionAccept, DescriptionCancel } from "../../style/Style";
+import { DescriptionBlocker, DescriptionDiv, DescriptionInput, DescriptionButtonCluster, DescriptionAccept, DescriptionCancel, DescriptionTitle } from "../../style/Style";
 
 export function Description(props) { //expected props: imagedata, function from parent component to toggle display of Blocker, show
     const dispatch = useDispatch();
@@ -18,6 +18,7 @@ export function Description(props) { //expected props: imagedata, function from 
     }
     return (<DescriptionBlocker show={props.show}>
         <DescriptionDiv>
+            <DescriptionTitle>Edit Description</DescriptionTitle>
             <DescriptionInput type="text" ref={inputField}/>
             <DescriptionButtonCluster>
                 <DescriptionAccept onClick={updateDescription}/>

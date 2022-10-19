@@ -13,6 +13,7 @@ export function CollectionItem(props) {
     const closeDescription = () => {showDescriptionSetter(false)};
     const openDescription = () => {showDescriptionSetter(true)};
     return (
+        <EmptyDiv>
             <CollectionDiv>
             <SearchImg src={props.imagedata.urls.regular} alt={props.imagedata.description}/>
             <h4>
@@ -29,8 +30,7 @@ export function CollectionItem(props) {
                 <CollectionDelete onClick={handleDeleteClick}/>
             </CollectionDetails>
         </CollectionDiv>
-
+        <Description imagedata={props.imagedata} show={showDescription} close={closeDescription}/>
+    </EmptyDiv>
     );
 }
-// EmptyDiv wrapping CollectionDiv, and also containing an additional Description tag, below
-// <Description imagedata={props.imagedata} show={showDescription} close={closeDescription}/>
