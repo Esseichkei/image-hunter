@@ -151,6 +151,22 @@ export const EmptyDiv = styled.div`
     justify-content: center;
     align-items: center;
 `;
+export const OrderByDiv = styled.div`
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+`;
+export const OrderByButton = styled.button`
+    margin: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    background-color: ${props => props.active ? '#D9D9D9' : 'transparent'};
+    border: ${props => props.active ? "2px solid black" : "2px solid transparent"};
+`;
 //Description
 export const DescriptionBlocker = styled.div`
     top: 0;
