@@ -25,7 +25,7 @@ export function Collection(props) {
                 <OrderByButton active={orderBy === 'width'} onClick={chooseWidth}>Width</OrderByButton>
                 <OrderByButton active={orderBy === 'height'} onClick={chooseHeight}>Height</OrderByButton>
             </OrderByDiv>
-            {collection.images.filter(image => image.description.toLowerCase().includes(query.toLowerCase())).sort((a, b) => a[orderBy] - b[orderBy]).map(image => <CollectionItem imagedata={image} key={'citem' + image.id}/>)}
+            {collection.images.filter(image => (image.description ? image.description.toLowerCase() : '').includes(query.toLowerCase())).sort((a, b) => a[orderBy] - b[orderBy]).map(image => <CollectionItem imagedata={image} key={'citem' + image.id}/>)}
         </MainDiv>
     );
 }

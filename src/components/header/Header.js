@@ -7,9 +7,17 @@ export function Header(props) {
     const handleSubmit = (ev) => {
         if (ev.key === "Enter") {
             if(onCollection) {
-                navigate("/collection/search/" + ev.target.value);
+                if (ev.target.value) {
+                    navigate("/collection/search/" + ev.target.value);
+                } else {
+                    navigate("/collection/");
+                }
             } else {
-                navigate("/search/" + ev.target.value);
+                if (ev.target.value) {
+                    navigate("/search/" + ev.target.value);
+                } else {
+                    navigate("/");
+                }
             }
         }
     };
