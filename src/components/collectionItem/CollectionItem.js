@@ -12,6 +12,18 @@ export function CollectionItem(props) {
     const [showDescription, showDescriptionSetter] = useState(false);
     const closeDescription = () => {showDescriptionSetter(false)};
     const openDescription = () => {showDescriptionSetter(true)};
+    const downloadImage = async () => {
+        const toDataURL = async (url) => {
+            const blob = await fetch(url).then(res => res.blob());
+            return URL.createObjectURL(blob);
+        };
+        const a = document.createElement("a");
+        a.href = await toDataURL(props.imagedata.urls.full);
+        a.download = "";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    };
     return (
         <EmptyDiv>
             <CollectionDiv>
@@ -24,9 +36,7 @@ export function CollectionItem(props) {
                 </h4>
                 <CollectionDetails>
                     <CollectionEdit onClick={openDescription}/>
-                    <a href={props.imagedata.links.download} download={props.imagedata.links.download}>
-                        <CollectionDownload/>
-                    </a>
+                    <CollectionDownload onClick={downloadImage}/>
                     <CollectionDelete onClick={handleDeleteClick}/>
                 </CollectionDetails>
             </CollectionDiv>
