@@ -7,10 +7,10 @@ export function Tabs(props) {
     return (
         <ContainerDiv>
             <StyledTabLink to='/' backgroundcolor={!inCollection ? '#F0F0F0' : ''}>
-                <p>Hunt for more</p>
+                <h5>Hunt for more</h5>
             </StyledTabLink>
             <StyledTabLink to='/collection' backgroundcolor={inCollection ? '#F0F0F0' : ''}>
-                <p>Your collection</p>
+                <h5>Your collection</h5>
             </StyledTabLink>
         </ContainerDiv>
     );

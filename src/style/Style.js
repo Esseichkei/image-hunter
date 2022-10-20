@@ -31,6 +31,8 @@ export const HeaderDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    font-size: 1.2rem;
+    font-weight: bold;
 `;
 export const SpacerDiv = styled.div`
     height: 73px;
@@ -60,8 +62,10 @@ export const StyledTabLink = styled(Link)`
     padding: 10px;
     border-radius: 5px;
     background-color: ${props => props.backgroundcolor ? '#F0F0F0' : 'transparent'};
+    color: black;
+    font-family: sans-serif;
+    text-decoration: none;
 `;
-
 //Search
 export const SearchItemDiv = styled.div`
     box-sizing: border-box;
