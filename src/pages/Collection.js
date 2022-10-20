@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadFavorites, selectCollection } from "../slices/collectionSlice/CollectionSlice";
-import { MainDiv, OrderByButton, OrderByDiv } from "../style/Style";
+import { MainDiv, OrderByButton, OrderByDiv, ResponsiveGallery, ResponsiveGalleryItem } from "../style/Style";
 import { CollectionItem } from "../components/collectionItem/CollectionItem";
 import { useParams } from "react-router-dom";
 
@@ -25,7 +25,9 @@ export function Collection(props) {
                 <OrderByButton active={orderBy === 'width'} onClick={chooseWidth}>Width</OrderByButton>
                 <OrderByButton active={orderBy === 'height'} onClick={chooseHeight}>Height</OrderByButton>
             </OrderByDiv>
-            {collection.images.filter(image => (image.description ? image.description.toLowerCase() : '').includes(query.toLowerCase())).sort((a, b) => a[orderBy] - b[orderBy]).map(image => <CollectionItem imagedata={image} key={'citem' + image.id}/>)}
+            <ResponsiveGallery>
+                {collection.images.filter(image => (image.description ? image.description.toLowerCase() : '').includes(query.toLowerCase())).sort((a, b) => a[orderBy] - b[orderBy]).map(image => <ResponsiveGalleryItem key={'cres' + image.id}><CollectionItem imagedata={image} key={'citem' + image.id}/></ResponsiveGalleryItem>)}
+            </ResponsiveGallery>
         </MainDiv>
     );
 }

@@ -1,4 +1,4 @@
-import { MainDiv } from "../style/Style";
+import { MainDiv, ResponsiveGallery, ResponsiveGalleryItem } from "../style/Style";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectSearch, loadImages } from "../slices/searchSlice/SearchSlice";
@@ -15,11 +15,11 @@ export function Search(props) {
     },[dispatch, query]);
     return (
         <MainDiv>
-            {
-                search.images.map((image) => {
-                    return <SearchItem imagedata={image} key={'sitem' + image.id}/>;
-                })
-            }
+            <ResponsiveGallery>
+                {search.images.map(image => {
+                    return <ResponsiveGalleryItem key={'sres' + image.id}><SearchItem imagedata={image} key={'sitem' + image.id}/></ResponsiveGalleryItem>;
+                })}
+            </ResponsiveGallery>
         </MainDiv>
     );
 }

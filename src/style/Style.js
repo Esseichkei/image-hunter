@@ -64,8 +64,9 @@ export const StyledTabLink = styled(Link)`
 
 //Search
 export const SearchItemDiv = styled.div`
-    margin: 10px;
-    width: 80%;
+    box-sizing: border-box;
+    margin: 1rem;
+    padding: 1rem;
     position: relative;
 `;
 export const SearchImg = styled.img`
@@ -92,7 +93,7 @@ export const SearchFavButton = styled.button`
 export const CollectionDiv = styled.div`
     margin: 1rem;
     padding: 1rem;
-    width: 80%;
+    width: 100%;
     background-color: #D9D9D9;
     border-radius: 1rem;
     display: flex;
@@ -147,6 +148,7 @@ export const CollectionDownload = styled.button`
 export const EmptyDiv = styled.div`
     margin: 0;
     padding: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,4 +233,22 @@ export const DescriptionCancel = styled.button`
     background-size: 65%;
     background-position: center;
     background-repeat: no-repeat;
+`;
+//Responsive design
+export const ResponsiveGallery = styled.div`
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+`;
+export const ResponsiveGalleryItem = styled.div`
+    width: 100%;
+    display: flex;
+    @media (min-width: 768px) {
+        width: 50%;
+      }
 `;

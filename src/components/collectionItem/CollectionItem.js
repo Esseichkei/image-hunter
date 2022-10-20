@@ -15,21 +15,21 @@ export function CollectionItem(props) {
     return (
         <EmptyDiv>
             <CollectionDiv>
-            <SearchImg src={props.imagedata.urls.regular} alt={props.imagedata.description}/>
-            <h4>
-                Image ID: {props.imagedata.id} <br/>
-                Dimensions: {props.imagedata.width} x {props.imagedata.height} <br/>
-                Likes: {props.imagedata.likes} <br/>
-                Description: {props.imagedata.description ? props.imagedata.description : "Not found."}
-            </h4>
-            <CollectionDetails>
-                <CollectionEdit onClick={openDescription}/>
-                <a href={props.imagedata.links.download} target="_blank" rel="noreferrer" download>
-                    <CollectionDownload/>
-                </a>
-                <CollectionDelete onClick={handleDeleteClick}/>
-            </CollectionDetails>
-        </CollectionDiv>
+                <SearchImg src={props.imagedata.urls.regular} alt={props.imagedata.description} />
+                <h4>
+                    Image ID: {props.imagedata.id} <br/>
+                    Dimensions: {props.imagedata.width} x {props.imagedata.height} <br/>
+                    Likes: {props.imagedata.likes} <br/>
+                    Description: {props.imagedata.description ? props.imagedata.description : "Not found."}
+                </h4>
+                <CollectionDetails>
+                    <CollectionEdit onClick={openDescription}/>
+                    <a href={props.imagedata.links.download} target="_blank" rel="noreferrer" download>
+                        <CollectionDownload/>
+                    </a>
+                    <CollectionDelete onClick={handleDeleteClick}/>
+                </CollectionDetails>
+            </CollectionDiv>
         <Description imagedata={props.imagedata} show={showDescription} close={closeDescription}/>
     </EmptyDiv>
     );

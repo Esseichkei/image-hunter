@@ -20,7 +20,8 @@ export function SearchItem(props) {
             favSetter(false);
         }
     }
-    return (<SearchItemDiv>
+    return (
+            <SearchItemDiv>
                 <SearchImg src={props.imagedata.urls.regular} alt={props.imagedata.description}/>
                 <SearchFavButton onClick={handleFavIconClick} opacity={fav ? 'true' : ''}/>
             </SearchItemDiv>);
