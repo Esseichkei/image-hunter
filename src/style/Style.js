@@ -179,6 +179,7 @@ export const OrderByButton = styled.button`
 //Description
 export const DescriptionBlocker = styled.div`
     top: 0;
+    left: 0;
     position: fixed;
     width: 100%;
     height: 100%;
