@@ -24,7 +24,7 @@ export function CollectionItem(props) {
                 </h4>
                 <CollectionDetails>
                     <CollectionEdit onClick={openDescription}/>
-                    <a href={props.imagedata.links.download} target="_blank" rel="noreferrer" download>
+                    <a href={props.imagedata.links.download} download={props.imagedata.links.download}>
                         <CollectionDownload/>
                     </a>
                     <CollectionDelete onClick={handleDeleteClick}/>
