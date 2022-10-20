@@ -72,6 +72,7 @@ export const SearchItemDiv = styled.div`
     margin: 1rem;
     padding: 1rem;
     position: relative;
+    min-height: 100px;
 `;
 export const SearchImg = styled.img`
     width: 100%;
